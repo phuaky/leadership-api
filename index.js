@@ -27,7 +27,7 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
-app.post('/', function(req, res) {
+app.post('/data', function(req, res) {
   var newScore = {
     name: req.body.name,
     cost: req.body.score
