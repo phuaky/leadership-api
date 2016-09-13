@@ -10,6 +10,11 @@ app.listen(3000, function() {
 
 app.set('view engine', 'ejs');
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
+
 var staticPath = path.join(__dirname, 'static');
 app.use(express.static(staticPath));
 
@@ -27,10 +32,10 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
-app.post('/', function(req, res) {
+app.post('/data', function(req, res) {
   var newScore = {
     name: req.body.name,
-    cost: req.body.score
+    score: req.body.score
   }
   score.push(newScore)
   res.json(newScore)

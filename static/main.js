@@ -17,7 +17,7 @@ $(function () {
     .done(function (data) {
       console.log('success')
 
-      // $('.main').empty()
+      // $('t').empty()
 
       data.forEach(function (elem, index) {
         $('table').append('<tr>' +
@@ -38,7 +38,7 @@ $(function () {
 
 function addScorer (scoreData) {
   $.ajax({
-    url: 'http://localhost:3000/',
+    url: 'http://localhost:3000/data',
     type: 'POST',
     data: scoreData
   }).done(function (data) {
