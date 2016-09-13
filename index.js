@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var app = express()
 
 app.listen(3000, function() {
-  console.log('your server is up and running!');
+  console.log('This is Irsyad reporting for duty!!');
 });
 
 app.set('view engine', 'ejs');
@@ -15,6 +15,6 @@ var data = [
   {name: 'Kuan Yu', score: 5}
 ]
 
-app.get("/", function(req, res) {
+app.get("/data", function(req, res) {
   res.json(data);
 });
