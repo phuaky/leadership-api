@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  background-color: #E0BDCF;
+  font-size: 20pt;
+}
+
+table {
+  margin: 0 auto;
+  border: 5px solid black;
+}
+
+td {
+  border: 3px dotted grey;
+  padding: 20px;
+}

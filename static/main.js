@@ -6,12 +6,15 @@ $(function () {
     .done(function (data) {
       console.log('success')
 
-      $('.main').empty()
+      // $('.main').empty()
+
       data.forEach(function (elem, index) {
-        $('.main').append('<div class="board"  id="' + index + '">' +
-          '<div class="card-header">' + elem.name + '</div>' +
-          '<div class="card-block">' + elem.score + '</div>' +
-          '</div>')
+        $('table').append('<tr>' +
+          '<td>' + elem.name + '</td>' +
+          '<td>' + elem.score + '</td>' +
+          '<td> <button onclick="">Edit</button> </td>' +
+          '<td> <button onclick="">Delete</button> </td>' +
+          '</tr>')
       })
     })
     .fail(function () {
