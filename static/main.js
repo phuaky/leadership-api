@@ -17,10 +17,10 @@ $(function () {
     .done(function (data) {
       console.log('success')
 
-      // $('t').empty()
+      $('.trow').empty()
 
       data.forEach(function (elem, index) {
-        $('table').append('<tr>' +
+        $('table').append('<tr class="trow">' +
           '<td>' + elem.name + '</td>' +
           '<td>' + elem.score + '</td>' +
           '<td> <button class="btn btn-info">Edit</button> </td>' +
@@ -44,6 +44,7 @@ function addScorer (scoreData) {
   }).done(function (data) {
     console.log('success adding scorer')
     // if we wanted to be efficient we would just append the new peanut but for ease we will instead just redisplay the list
+
     listScorers()
   }).fail(function () {
     console.log('error adding scorer')
