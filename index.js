@@ -5,14 +5,19 @@ var bodyParser = require('body-parser');
 var app = express()
 
 app.listen(3000, function() {
-  console.log('your server is up and running!');
+  console.log('Yo yo yo, This is Irsyad reporting for duty!!');
 });
+
+app.set('view engine', 'ejs');
+
+var staticPath = path.join(__dirname, 'static');
+app.use(express.static(staticPath));
 
 var data = [
   {name: 'Irsyad', score: 100},
   {name: 'Kuan Yu', score: 500}
 ]
 
-app.get("/", function(req, res) {
+app.get("/data", function(req, res) {
   res.json(data);
 });
