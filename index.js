@@ -15,7 +15,7 @@ app.use(express.static(staticPath));
 
 var data = [
   {name: 'Irsyad', score: 100},
-  {name: 'Kuan Yu', score: 5}
+  {name: 'Kuan Yu', score: 500}
 ]
 
 app.get("/data", function(req, res) {
