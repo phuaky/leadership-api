@@ -20,4 +20,9 @@ var data = [
 
 app.get("/data", function(req, res) {
   res.json(data);
+  // res.render('index')
 });
+
+app.get('/', function(req, res) {
+  res.render('index')
+})
