@@ -10,7 +10,7 @@ app.listen(3000, function() {
 
 var data = [
   {name: 'Irsyad', score: 100},
-  {name: 'Kuan Yu', score: 5}
+  {name: 'Kuan Yu', score: 500}
 ]
 
 app.get("/", function(req, res) {

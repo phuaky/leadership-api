@@ -1,3 +1,11 @@
-$.get('http://express-blog-wdi5.herokuapp.com/blogposts', function(data) {
-  $('#main').append(data)
+// DOM manipulation here
+$(function () {
+  // your code here
+  console.log('DOM is working');
+
+  $.ajax({
+    url: 'http://localhost:3000',
+    type: 'GET'
+  })
+
 })
