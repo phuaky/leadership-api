@@ -13,13 +13,13 @@ app.set('view engine', 'ejs');
 var staticPath = path.join(__dirname, 'static');
 app.use(express.static(staticPath));
 
-var data = [
+var score = [
   {name: 'Irsyad', score: 100},
   {name: 'Kuan Yu', score: 500}
 ]
 
 app.get("/data", function(req, res) {
-  res.json(data);
+  res.json(score);
   // res.render('index')
 });
 
