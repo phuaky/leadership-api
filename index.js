@@ -26,3 +26,17 @@ app.get("/data", function(req, res) {
 app.get('/', function(req, res) {
   res.render('index')
 })
+
+app.post('/', function(req, res) {
+  var newScore = {
+    name: req.body.name,
+    cost: req.body.score
+  }
+  score.push(newScore)
+  res.json(newScore)
+})
+
+app.delete('/peanuts/:id', function (req, res) {
+  peanuts.splice(req.params.id,1)
+  res.json({message: 'success'})
+})
