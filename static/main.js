@@ -17,14 +17,15 @@ $(function () {
     .done(function (data) {
       console.log('success')
 
-      $('.trow').empty()
+      $('tbody').empty()
 
       data.forEach(function (elem, index) {
-        $('table').append('<tr class="trow">' +
-          '<td>' + elem.name + '</td>' +
-          '<td>' + elem.score + '</td>' +
-          '<td> <button class="btn btn-info">Edit</button> </td>' +
-          '<td> <button class="btn btn-danger">Delete</button> </td>' +
+        $('tbody').append(
+          '<tr>' +
+          '<td>' + '<span contenteditable="true">' + elem.name + '</td>' +
+          '<td>' + '<span contenteditable="true">' + elem.score + '</td>' +
+          '<td> <button class="btn btn-info" onclick="">Edit</button> </td>' +
+          '<td> <button class="btn btn-danger" onclick="">Delete</button> </td>' +
           '</tr>')
       })
     })
@@ -49,4 +50,8 @@ function addScorer (scoreData) {
   }).fail(function () {
     console.log('error adding scorer')
   })
+}
+
+function editTime() {
+
 }
