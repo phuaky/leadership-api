@@ -6,7 +6,7 @@ var app = express()
 
 app.listen(3000, function() {
   console.log('Yo yo yo, This is Irsyad reporting for duty!!');
-  console.log('Yo Irshyad, KY receive your loud and clear!!!');
+  console.log('Yo Irsyad, KY receive your loud and clear!!!');
 });
 
 app.set('view engine', 'ejs');
