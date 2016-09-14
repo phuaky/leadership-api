@@ -8,7 +8,7 @@ $(function () {
   addScorer(data) // send ajax request
 })
 
-$('main').on('click', '.delete-scorer', function () {
+$('.main').on('click', '.delete-scorer', function () {
   var id = $(this).parent().attr('id')
   deleteScore(id)
 })
@@ -59,16 +59,16 @@ function addScorer (scoreData) {
   })
 }
 
-// DELETE /peanuts/:id
-function deletePeanut (scoreId) {
+// DELETE /score/:id
+function deleteScore (scoreId) {
   $.ajax({
-    url: 'http://localhost:3000/peanuts/' + scoreId,
+    url: 'http://localhost:3000/data/' + scoreId,
     type: 'DELETE'
   }).done(function (data) {
-    console.log('success deleting peanut')
+    console.log('success deleting score')
     // if we wanted to be efficient we would just append the new peanut but for ease we will instead just redisplay the list
     listScorers()
   }).fail(function () {
-    console.log('error deleting peanut')
+    console.log('error deleting score')
   })
 }
