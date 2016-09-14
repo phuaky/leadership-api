@@ -59,3 +59,17 @@ function addScorer (scoreData) {
     console.log('error adding scorer')
   })
 }
+
+// DELETE /score/:id
+function deleteScore (scoreId) {
+  $.ajax({
+    url: 'http://localhost:3000/data/' + scoreId,
+    type: 'DELETE'
+  }).done(function (data) {
+    console.log('success deleting score')
+    // if we wanted to be efficient we would just append the new peanut but for ease we will instead just redisplay the list
+    listScorers()
+  }).fail(function () {
+    console.log('error deleting score')
+  })
+}
