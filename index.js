@@ -42,7 +42,7 @@ app.post('/data', function(req, res) {
   res.json(newScore)
 })
 
-app.delete('/peanuts/:id', function (req, res) {
-  peanuts.splice(req.params.id,1)
+app.delete('/data/:id', function (req, res) {
+  score.splice(req.params.id,1)
   res.json({message: 'success'})
 })
